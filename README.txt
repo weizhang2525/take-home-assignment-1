@@ -8,6 +8,7 @@ Due to the simplistic nature of the task, I made some safe assumptions as they w
 - Each Dropdown has its own state that is managed by itself. 
 - All the selected values are retrieved by a parent function.
 - Does not need to support the ability to pass an option list to > 1 Dropdown.
+- Use case of muti-select and single select functionalities is always turned on was assumed. 
 
 
 Thought Process:
@@ -17,13 +18,16 @@ I created 2 helper components that were shared amongst the 2 essential component
 
 Some functionality inspiration came from material-ui's select component(found here: https://material-ui.com/components/selects/). Initially, I had the onClick handlers directly on the icons but to avoid user mis-clicking causing the function to not fire, I moved it on top of the wrapper. It also gave me an idea of what would happen when the option text or the total values selected are too long to display.
 
-- Efficiency. Can your component render large lists efficiently? Is your component doing excessivecomputations? 
+- Efficiency. Can your component render large lists efficiently? Is your component doing excessive
+computations? 
 
 I believe my component can render large lists efficiently. Options are passed into the Dropdown component and is rendered by using a map() function once it is turned into an object with "selected" state. Run time is O(n). Only simple computations are ran as I broke down the component into pieces.
-- Extensibility. Can functionality be added to your component relatively easily?
+
+- Extensibility. Can functionality be added to your component relatively easily?
 
 I believe so, the developer just has to pass in a list of strings for options, a state handler to save the state in the parent component, and a helper text if the developer wishes.
-- Readability. Can a fellow developer dive right into your code?
+
+- Readability. Can a fellow developer dive right into your code?
 
 I believe so. I tried my best to separate business logic from JSX to keep things separated. Documentation were provided inside the codebase to help guide a fellow developer for ease of access. I tried to name the variables so a fellow developer can hypothesize the meaning of it.
 
