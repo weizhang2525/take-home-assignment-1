@@ -50,6 +50,9 @@ resources referenced:
 - ellipsis for entries that did not fix the textbook displaying values:
 https://stackoverflow.com/questions/30945109/stop-text-from-leaking-out-of-div/30945146
 
+- dropdown was pushing content down once it expanded:
+https://stackoverflow.com/questions/54613785/how-to-stop-dropdown-menu-from-pushing-content-down
+
 BONUS: Button provided to allow user to select/deselect all options in Dropdown 1.
 
 
