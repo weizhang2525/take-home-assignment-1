@@ -11,7 +11,6 @@ const Textbox = styled.div`
   white-space: nowrap;
   overflow: hidden;
   text-overflow: ellipsis;
-  max-width: "100%";
 `;
 
 const Dropdown = ({
@@ -97,8 +96,8 @@ const Dropdown = ({
         style
           ? { ...style }
           : {
-              minWidth: "300px",
-              maxWidth: "500px",
+              width: "300px",
+              position: "relative",
             }
       }
     >
@@ -127,8 +126,14 @@ const Dropdown = ({
         <Flex
           style={{
             flexDirection: "column",
+            width: "inherit",
             overflowY: "scroll",
+            overflowX: "hidden",
             maxHeight: "200px",
+            maxWidth: "inherit",
+            position: "absolute",
+            zIndex: 1,
+            background: "#344167",
           }}
         >
           {dropdownOptionState.map((option, k) => {
@@ -138,6 +143,9 @@ const Dropdown = ({
                 selected={option.selected}
                 selectedClick={() => {
                   handleSelectClicked(k);
+                }}
+                style={{
+                  width: "inherit",
                 }}
               >
                 {option.value}

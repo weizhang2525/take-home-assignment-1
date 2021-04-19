@@ -67,8 +67,7 @@ function App() {
           <div>Dropdown 1</div>
           <Dropdown
             style={{
-              minWidth: "300px",
-              maxWidth: "500px",
+              maxWidth: "300px",
             }}
             options={option1}
             helperText="Choose an option"
@@ -91,11 +90,7 @@ function App() {
           >
             Dropdown 3 (empty)
           </div>
-          <Dropdown
-            style={{
-              maxWidth: "500px",
-            }}
-          />
+          <Dropdown />
         </Container>
       </header>
     </div>
